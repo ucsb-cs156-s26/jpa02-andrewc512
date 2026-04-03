@@ -60,5 +60,16 @@ public class TeamTest {
         assert(!team.equals(other));
     }
 
+    @Test
+    public void same_name_and_members_hashcode_equals() {
+        Team other = new Team("test-team");
+        assert(team.hashCode() == other.hashCode());
+    }
+
+    @Test
+    public void different_name_or_members_hashcode_not_equals() {
+        Team other = new Team("other-team");
+        assert(team.hashCode() != other.hashCode());
+    }
 
 }
