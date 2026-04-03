@@ -36,4 +36,16 @@ public class DeveloperTest {
         assertEquals("s26-staff", t.getName());
     }
 
+    @Test
+    public void getTeam_returns_team_with_correct_members() {
+        Team t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Andrew"));
+        assertTrue(t.getMembers().contains("Daniel"));
+        assertTrue(t.getMembers().contains("Derek"));
+        assertTrue(t.getMembers().contains("Divyani"));
+        assertTrue(t.getMembers().contains("Kirill"));
+        assertTrue(t.getMembers().contains("Wendy"));
+        assertTrue(t.getMembers().contains("Phill"));
+    }
+
 }
