@@ -24,4 +24,41 @@ public class TeamTest {
         assertEquals("Team(name=test-team, members=[])", team.toString());
     }
 
+    @Test
+    public void same_object_returns_true() {
+        assert(team.equals(team));
+    }
+
+    @Test
+    public void different_type_returns_false() {
+        assert(!team.equals("test-team"));
+    }
+
+    @Test
+    public void same_name_and_members_returns_true() {
+        Team other = new Team("test-team");
+        assert(team.equals(other));
+    }
+
+    @Test
+    public void same_name_different_members_returns_false() {
+        Team other = new Team("test-team");
+        other.addMember("Alice");
+        assert(!team.equals(other));
+    }
+
+    @Test
+    public void different_name_same_members_returns_false() {
+        Team other = new Team("other-team");
+        assert(!team.equals(other));
+    }
+
+    @Test
+    public void different_name_and_members_returns_false() {
+        Team other = new Team("other-team");
+        other.addMember("Alice");
+        assert(!team.equals(other));
+    }
+
+
 }
