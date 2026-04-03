@@ -1,10 +1,5 @@
 # jpa02-andrewc512
 
-* TODO: Correct the links to repo below, 
-  then delete this TODO.  Replace it with 
-  a link to your repo, e.g. 
-  https://github.com/ucsb-cs156-s26/jpa02-cgaucho
-
 Repo: https://github.com/ucsb-cs156-s26/jpa02-andrewc512
 
 Deployed at: https://jpa02-andrewc512.dokku-00.cs.ucsb.edu
